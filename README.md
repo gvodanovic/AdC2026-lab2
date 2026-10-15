@@ -103,3 +103,9 @@ Generar la traza hace la simulación más lenta (en el in-order, con daxpy compl
 ```sh
 TRACE=0 BENCHMARK=ej_daxpy PROCESSOR=in_order ./run_simulation.sh
 ```
+
+
+## Agradecimientos
+
+- **Alvaro Roy Schachner**: por la implementación de algunos scripts básicos para automatizar el uso de gem5.
+- **Manuel Nieto** y **Francisco Cortez**: por la implementación del visualizador MinorFlow y su presentación en el congreso [CARLA](https://carlaconference.org/rv-converge/).
