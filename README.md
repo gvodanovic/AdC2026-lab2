@@ -3,7 +3,7 @@
 ## Estructura de archivos
 
 - `run_simulation.sh`: Archivo para correr la simulación, en él se debe elegir el benchmark a correr y la configuración del procesador a utilizar. También genera la traza de la ejecución y abre su visualizador (ver más abajo).
-- `visualizadores`: Visualizadores de la ejecución en el pipeline, `MinorFlow.html` (in-order) y `Konata.html` (out-of-order), con sus licencias.
+- `visualizadores`: Visualizadores de la ejecución en el pipeline, `MinorFlow.html` (in-order) y `Konata.html` (out-of-order).
 - `benchmarks`: Carpeta donde se encuentran los templates de los ejercicios a resolver, en assembler RISC-V.
 - `scripts`: Carpeta que incluye todos los scripts de ejecución y configuración de la simulación de ejecución del procesador.
   + `cpu_config.toml` - archivo que tiene configuraciones generales del micro, aplican a cualquier configuración de procesador que ejecuten.

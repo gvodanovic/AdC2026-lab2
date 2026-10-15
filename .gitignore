@@ -3,4 +3,20 @@ se_results/
 sim.log
 minorflow/
 konata/
-benchmarks/*.img
+*.img
+
+# Salida de gem5 si se corre a mano
+m5out/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
