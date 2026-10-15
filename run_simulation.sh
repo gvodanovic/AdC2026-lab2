@@ -47,12 +47,12 @@ if [ "$TRACE" = "1" ]; then
         # contenedor, que se borra al terminar, y afuera queda solo el JSON.
         TRACE_FLAGS="--debug-flags=Minor,MinorTrace,CacheAll,ExecAll,Fetch,Decode,RAS --debug-file=/tmp/trace.txt"
         TRACE_FILE="minorflow/${BENCHMARK}_${PROCESSOR}.json"
-        VIEWER="visores/MinorFlow.html"
+        VIEWER="visualizadores/MinorFlow.html"
     elif [ "$CORE" = "o3" ]; then
         # gem5 escribe la traza de Konata ya comprimida.
         TRACE_FLAGS="--debug-flags=O3PipeView,Rename,MemDepUnit,LSQUnit --debug-file=/local/konata/${BENCHMARK}_${PROCESSOR}.trace.gz"
         TRACE_FILE="konata/${BENCHMARK}_${PROCESSOR}.trace.gz"
-        VIEWER="visores/Konata.html"
+        VIEWER="visualizadores/Konata.html"
         mkdir -p konata
     else
         echo "info: no se reconoce el core de $PROCESSOR, no se genera la traza"

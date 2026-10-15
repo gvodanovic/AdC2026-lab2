@@ -3,7 +3,7 @@
 ## Estructura de archivos
 
 - `run_simulation.sh`: Archivo para correr la simulación, en él se debe elegir el benchmark a correr y la configuración del procesador a utilizar. También genera la traza de la ejecución y abre su visualizador (ver más abajo).
-- `visores`: Visualizadores de la ejecución en el pipeline, `MinorFlow.html` (in-order) y `Konata.html` (out-of-order), con sus licencias.
+- `visualizadores`: Visualizadores de la ejecución en el pipeline, `MinorFlow.html` (in-order) y `Konata.html` (out-of-order), con sus licencias.
 - `benchmarks`: Carpeta donde se encuentran los templates de los ejercicios a resolver, en assembler RISC-V.
 - `scripts`: Carpeta que incluye todos los scripts de ejecución y configuración de la simulación de ejecución del procesador.
   + `cpu_config.toml` - archivo que tiene configuraciones generales del micro, aplican a cualquier configuración de procesador que ejecuten.
@@ -88,8 +88,8 @@ Cada vez que se corre `run_simulation.sh` se genera la traza de la ejecución y 
 
 | Procesador | Visualizador | Traza |
 |---|---|---|
-| in-order (CVA6) | `visores/MinorFlow.html` | `minorflow/<benchmark>_<procesador>.json` |
-| out-of-order | `visores/Konata.html` | `konata/<benchmark>_<procesador>.trace.gz` |
+| in-order (CVA6) | `visualizadores/MinorFlow.html` | `minorflow/<benchmark>_<procesador>.json` |
+| out-of-order | `visualizadores/Konata.html` | `konata/<benchmark>_<procesador>.trace.gz` |
 
 Los visualizadores no cargan la traza solos: hay que arrastrarla a la ventana del navegador, o elegirla con *Load JSON* (MinorFlow) u *Open* (Konata). No hace falta instalar nada. Si el navegador no se abre, abrir el archivo del visualizador con doble click.
 
