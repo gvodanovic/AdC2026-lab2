@@ -1,0 +1,6 @@
+# Archivos que genera run_simulation.sh
+se_results/
+sim.log
+minorflow/
+konata/
+benchmarks/*.img
