@@ -18,9 +18,9 @@
 - **Docker**, para correr gem5 y el compilador de RISC-V sin instalarlos (ver abajo cómo instalarlo).
 - **Una terminal con bash**: la de Linux o macOS, o la de Ubuntu en WSL en Windows.
 - **Un navegador** actual (Chrome, Firefox, Edge o Safari), para los visualizadores.
-- **Espacio en disco**: unos 10 GB libres.
-  + La imagen del laboratorio, `gvodanovic/famaf_adc2026:lab2`, se descarga una sola vez: son alrededor de 1,4 GB de descarga y ocupa 3,1 GB instalada.
-  + Al generar la traza de un procesador in-order, gem5 usa hasta 3 GB temporales dentro de Docker, que se liberan al terminar.
+- **Espacio en disco**: unos 20 GB libres.
+  + La imagen del laboratorio, `gvodanovic/famaf_adc2026:lab2`, se descarga una sola vez: son alrededor de 0,9 GB de descarga y ocupa 1,2 GB instalada.
+  + Al generar la traza de un procesador in-order, gem5 usa espacio temporal dentro de Docker, que se libera al terminar: con daxpy completo, unos 3 GB con 8 vías y más de 13 GB con mapeo directo, porque la traza crece con la cantidad de ciclos. Para no generarla, ver `TRACE=0` más abajo.
 - **Memoria**: la simulación usa menos de 300 MB. Alcanza con una computadora de 4 GB de RAM, contando lo que usa Docker.
 
 ### Instalar Docker

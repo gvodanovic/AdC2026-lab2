@@ -3,7 +3,7 @@ N:      .dword 4096     # Number of elements in the vectors
 Alpha:  .dword 2        # scalar value
 
 	.bss
-	.align 3
+	.align 6               # vectors aligned to a 64-byte cache line
 X:      .zero 32768     # vector X(4096)*8
 Y:      .zero 32768     # Vector Y(4096)*8
 Z:      .zero 32768     # Vector Z(4096)*8

@@ -991,12 +991,14 @@ def o3_processor(bp_class):
 
 def _tune_o3_l1(self, l1i_assoc, l1d_assoc):
     """Las L1 del out_of_order.py de 2025: 2 ciclos de latencia. Sin L2 no
-    hay victim cache, asi que las lineas limpias no se escriben al desalojarse."""
+    hay victim cache, asi que las lineas limpias no se escriben al desalojarse.
+    Cada MSHR admite 16 accesos a la misma linea, como en CVA6: con 8, una
+    linea de 64 B (8 doubles) llena el MSHR y gem5 bloquea toda la cache."""
     for cache in list(self.l1icaches) + list(self.l1dcaches):
         cache.tag_latency = 2
         cache.data_latency = 2
         cache.response_latency = 2
-        cache.tgts_per_mshr = 8
+        cache.tgts_per_mshr = 16
         cache.writeback_clean = False
         cache.prefetcher = NULL
     for cache in self.l1icaches:
